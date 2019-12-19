@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+    (function (win, doc) {
+        if (!win.addEventListener) return;
+        // var html = document.documentElement;
+        var rootValue = 100;  // 此处值与postcss配置中'postcss-pxtorem'的值一样
+
+        function setFont () {
+            var html = document.documentElement;
+            var k = 1600;
+            html.style.fontSize = html.clientHeight / k * rootValue + 'px';
+        }
+        setFont();
+        setTimeout(function () {
+            setFont();
+        }, 300);
+        doc.addEventListener('DOMContentLoaded', setFont, false);
+        win.addEventListener('resize', setFont, false);
+        win.addEventListener('load', setFont, false);
+    })(window, document);
+    </script>
+    <link rel="stylesheet" href="css/swiper.min.css">
+    <!-- <link rel="stylesheet" href="css/animate.css"> -->
+    <link rel="stylesheet" href="./css/style.css">
+
+</head>
+<body>
+    <div class="swiper-container swiper-container-horizontal">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <img src="./img/bg_index_01.jpg" alt="">
+                <!-- <div class="bg-index-01-img bg"></div> -->
+            </div>
+            <div class="swiper-slide">
+                <img src="./img/bg_index_02.jpg" alt="" class="ani" swiper-animate-effect="fadeIn" swiper-animate-duration="1s" swiper-animate-delay="0">
+                <!-- <div class="bg-index-02-img bg"></div> -->
+                <div class="bg-index-02-text pos-center ani" swiper-animate-effect="fadeInLeft" swiper-animate-duration="1s" swiper-animate-delay="0"></div>
+            </div>
+            <div class="swiper-slide">
+                <div class="bg-01 bg ani" swiper-animate-effect="fadeIn" swiper-animate-duration="1s" swiper-animate-delay="0"></div>
+                <div class="bg-01-img pos-center ani" swiper-animate-effect="fadeInRight" swiper-animate-duration="1s" swiper-animate-delay="0"></div>
+                <div class="bg-01-text pos-center ani" swiper-animate-effect="fadeInUp" swiper-animate-duration="1s" swiper-animate-delay="0.5s"></div>
+                <div class="bg-01-title pos-center ani" swiper-animate-effect="fadeIn" swiper-animate-duration="1s" swiper-animate-delay="0.5s"></div>
+            </div>
+            <div class="swiper-slide">
+                <div class="animate-box overflow-y ani" swiper-animate-effect="fadeIn" swiper-animate-duration="1s" swiper-animate-delay="0">
+                    <img src="./img/bg_01_02_img_01.jpg" alt="">
+                    <img src="./img/bg_01_02_img_02.jpg" alt="">
+                    <img src="./img/bg_01_02_img_03.jpg" alt="">
+                    <img src="./img/bg_01_02_img_04.jpg" alt="">
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="bg-01-03 bg"></div>
+                <div class="bg-01-03-img pos-center ani" swiper-animate-effect="fadeInRight" swiper-animate-duration="1s" swiper-animate-delay="0"></div>
+                <div class="bg-01-03-title pos-center ani" swiper-animate-effect="fadeInLeft" swiper-animate-duration="1s" swiper-animate-delay="0"></div>
+                <div class="bg-01-03-text pos-center ani" swiper-animate-effect="fadeIn" swiper-animate-duration="1s" swiper-animate-delay="0.5s"></div>
+            </div>
+            <div class="swiper-slide">
+                <div class="animate-box ani" swiper-animate-effect="fadeIn" swiper-animate-duration="1s" swiper-animate-delay="0">
+                    <img src="./img/bg_01_04_img_01.jpg" alt="">
+                    <div class="overflow-y overflow-01-content">
+                        <img src="./img/bg_01_04_img_02.jpg" alt="">
+                        <img src="./img/bg_01_04_img_03.jpg" alt="">
+                        <img src="./img/bg_01_04_img_04.jpg" alt="">
+                        <img src="./img/bg_01_04_img_05.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="bg-02 bg ani" swiper-animate-effect="fadeIn" swiper-animate-duration="1s" swiper-animate-delay="0"></div>
+                <div class="bg-02-img pos-center ani" swiper-animate-effect="fadeInRight" swiper-animate-duration="1s" swiper-animate-delay="0"></div>
+                <div class="bg-02-text pos-center ani" swiper-animate-effect="fadeInUp" swiper-animate-duration="1s" swiper-animate-delay="0.5s"></div>
+                <div class="bg-02-title pos-center ani" swiper-animate-effect="fadeIn" swiper-animate-duration="1s" swiper-animate-delay="0.5s"></div>
+            </div>
+            <div class="swiper-slide stop-swiping touch-move" data-animate="false">
+                <div class="animate-box ani" swiper-animate-effect="fadeIn" swiper-animate-duration="1s" swiper-animate-delay="0">
+                    <div class="touch-div">
+                        <div class="bg-02-02-text pos-center"></div>
+                        <img src="./img/bg_02_02_img.jpg" alt="">
+                    </div>
+                    <div class="touch-content">
+                        <div class="scroll-content">
+                            <img src="./img/bg_02_02_01_img_01.jpg" alt="">
+                            <img src="./img/bg_02_02_01_img_02.jpg" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide stop-swiping touch-move" data-animate="false">
+                <div class="animate-box ani" swiper-animate-effect="fadeIn" swiper-animate-duration="1s" swiper-animate-delay="0">
+                    <div class="touch-div">
+                        <div class="bg-02-03-text pos-center"></div>
+                        <img src="./img/bg_02_03_img.jpg" alt="">
+                    </div>
+                    <div class="touch-content">
+                        <div class="scroll-content">
+                            <img src="./img/bg_02_02_02_img_01.jpg" alt="">
+                            <img src="./img/bg_02_02_02_img_02.jpg" alt="">
+                            <img src="./img/bg_02_02_02_img_03.jpg" alt="">
+                        </div>
+                    </div>
+                </div> 
+            </div>
+            <div class="swiper-slide">
+                <img src="./img/bg_04_03.jpg" alt="" class="ani" swiper-animate-effect="fadeIn" swiper-animate-duration="1s" swiper-animate-delay="0">
+                <div class="bg-02-02-03-img pos-center ani" swiper-animate-effect="fadeInRight" swiper-animate-duration="1s" swiper-animate-delay="0"></div>
+                <div class="bg-02-02-03-title pos-center ani" swiper-animate-effect="fadeInLeft" swiper-animate-duration="1s" swiper-animate-delay="0"></div>
+                <div class="bg-02-02-03-text pos-center ani" swiper-animate-effect="fadeIn" swiper-animate-duration="1s" swiper-animate-delay="0.5s"></div>
+            </div>
+            <div class="swiper-slide">
+                <div class="animate-box ani" swiper-animate-effect="fadeIn" swiper-animate-duration="1s" swiper-animate-delay="0">
+                    <img src="./img/bg_02_02_04_img_01.jpg" alt="">
+                    <div class="overflow-y overflow-02-content">
+                        <img src="./img/bg_02_02_04_img_02.jpg" alt="">
+                        <img src="./img/bg_02_02_04_img_03.jpg" alt="">
+                        <img src="./img/bg_02_02_04_img_04.jpg" alt="">
+                        <img src="./img/bg_02_02_04_img_05.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="bg-03 bg ani" swiper-animate-effect="fadeIn" swiper-animate-duration="1s" swiper-animate-delay="0"></div>
+                <div class="bg-03-img pos-center ani" swiper-animate-effect="fadeInRight" swiper-animate-duration="1s" swiper-animate-delay="0"></div>
+                <div class="bg-03-text pos-center ani" swiper-animate-effect="fadeInUp" swiper-animate-duration="1s" swiper-animate-delay="0.5s"></div>
+                <div class="bg-03-title pos-center ani" swiper-animate-effect="fadeIn" swiper-animate-duration="1s" swiper-animate-delay="0.5s"></div>
+            </div>
+            <div class="swiper-slide">
+                <div class="animate-box overflow-y ani" swiper-animate-effect="fadeIn" swiper-animate-duration="1s" swiper-animate-delay="0">
+                    <img src="./img/bg_03_02_img_01.jpg" alt="">
+                    <img src="./img/bg_03_02_img_02.jpg" alt="">
+                    <img src="./img/bg_03_02_img_03.jpg" alt="">
+                    <img src="./img/bg_03_02_img_04.jpg" alt="">
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="animate-box overflow-y ani" swiper-animate-effect="fadeIn" swiper-animate-duration="1s" swiper-animate-delay="0">
+                    <img src="./img/bg_03_03_img_01.jpg" alt="">
+                    <img src="./img/bg_03_03_img_02.jpg" alt="">
+                    <img src="./img/bg_03_03_img_03.jpg" alt="">
+                    <img src="./img/bg_03_03_img_04.jpg" alt="">
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="animate-box overflow-y ani" swiper-animate-effect="fadeIn" swiper-animate-duration="1s" swiper-animate-delay="0">
+                    <img src="./img/bg_03_04_img_01.jpg" alt="">
+                    <img src="./img/bg_03_04_img_02.jpg" alt="">
+                    <img src="./img/bg_03_04_img_03.jpg" alt="">
+                    <img src="./img/bg_03_04_img_04.jpg" alt="">
+                 </div>   
+            </div>
+            <div class="swiper-slide">
+                <div class="animate-box overflow-y ani" swiper-animate-effect="fadeIn" swiper-animate-duration="1s" swiper-animate-delay="0">
+                    <img src="./img/bg_03_05_img_01.jpg" alt="">
+                    <img src="./img/bg_03_05_img_02.jpg" alt="">
+                    <img src="./img/bg_03_05_img_03.jpg" alt="">
+                </div>   
+            </div>
+            <div class="swiper-slide">
+                <div class="animate-box overflow-y ani" swiper-animate-effect="fadeIn" swiper-animate-duration="1s" swiper-animate-delay="0">
+                    <img src="./img/bg_03_06_img_01.jpg" alt="">
+                    <img src="./img/bg_03_06_img_02.jpg" alt="">
+                    <img src="./img/bg_03_06_img_03.jpg" alt="">
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="animate-box overflow-y ani" swiper-animate-effect="fadeIn" swiper-animate-duration="1s" swiper-animate-delay="0">
+                    <img src="./img/bg_03_07_img_01.jpg" alt="">
+                    <img src="./img/bg_03_07_img_02.jpg" alt="">
+                    <img src="./img/bg_03_07_img_03.jpg" alt="">
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="animate-box overflow-y ani" swiper-animate-effect="fadeIn" swiper-animate-duration="1s" swiper-animate-delay="0">
+                    <img src="./img/bg_03_08_img_01.jpg" alt="">
+                    <img src="./img/bg_03_08_img_02.jpg" alt="">
+                    <img src="./img/bg_03_08_img_03.jpg" alt="">
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="animate-box overflow-y ani" swiper-animate-effect="fadeIn" swiper-animate-duration="1s" swiper-animate-delay="0">
+                    <img src="./img/bg_03_09_img_01.jpg" alt="">
+                    <img src="./img/bg_03_09_img_02.jpg" alt="">
+                    <img src="./img/bg_03_09_img_03.jpg" alt="">
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="animate-box overflow-y ani" swiper-animate-effect="fadeIn" swiper-animate-duration="1s" swiper-animate-delay="0">
+                    <img src="./img/bg_03_10_img_01.jpg" alt="">
+                    <img src="./img/bg_03_10_img_02.jpg" alt="">
+                    <img src="./img/bg_03_10_img_03.jpg" alt="">
+                    <img src="./img/bg_03_10_img_04.jpg" alt="">
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="animate-box overflow-y ani" swiper-animate-effect="fadeIn" swiper-animate-duration="1s" swiper-animate-delay="0">
+                    <img src="./img/bg_03_11_img_01.jpg" alt="">
+                    <img src="./img/bg_03_11_img_02.jpg" alt="">
+                    <img src="./img/bg_03_11_img_03.jpg" alt="">
+                    <img src="./img/bg_03_11_img_04.jpg" alt="">
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <img src="./img/bg_03_12_img.jpg" alt="" class="ani" swiper-animate-effect="fadeIn" swiper-animate-duration="1s" swiper-animate-delay="0">
+            </div>
+            <div class="swiper-slide">
+                <div class="bg-04 bg ani" swiper-animate-effect="fadeIn" swiper-animate-duration="1s" swiper-animate-delay="0"></div>
+                <div class="bg-04-img pos-center ani" swiper-animate-effect="fadeInRight" swiper-animate-duration="1s" swiper-animate-delay="0"></div>
+                <div class="bg-04-text pos-center ani" swiper-animate-effect="fadeInUp" swiper-animate-duration="1s" swiper-animate-delay="0.5s"></div>
+                <div class="bg-04-title pos-center ani" swiper-animate-effect="fadeIn" swiper-animate-duration="1s" swiper-animate-delay="0.5s"></div>
+            </div>
+            <div class="swiper-slide">
+                <div class="animate-box overflow-y ani" swiper-animate-effect="fadeIn" swiper-animate-duration="1s" swiper-animate-delay="0">
+                    <img src="./img/bg_04_02_img_01.jpg" alt="">
+                    <img src="./img/bg_04_02_img_02.jpg" alt="">
+                    <img src="./img/bg_04_02_img_03.jpg" alt="">
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <img src="./img/bg_04_03.jpg" alt="" class="ani" swiper-animate-effect="fadeIn" swiper-animate-duration="1s" swiper-animate-delay="0">
+                <div class="bg-04-03-img pos-center ani" swiper-animate-effect="fadeInRight" swiper-animate-duration="1s" swiper-animate-delay="0"></div>
+                <div class="bg-04-03-title pos-center ani" swiper-animate-effect="fadeInLeft" swiper-animate-duration="1s" swiper-animate-delay="0"></div>
+                <div class="bg-04-03-text pos-center ani" swiper-animate-effect="fadeIn" swiper-animate-duration="1s" swiper-animate-delay="0.5s"></div>
+            </div>
+            <div class="swiper-slide">
+                <div class="animate-box overflow-y ani" swiper-animate-effect="fadeIn" swiper-animate-duration="1s" swiper-animate-delay="0">
+                    <img src="./img/bg_04_04_img_01.jpg" alt="">
+                    <img src="./img/bg_04_04_img_02.jpg" alt="">
+                    <img src="./img/bg_04_04_img_03.jpg" alt="">
+                    <img src="./img/bg_04_04_img_04.jpg" alt="">
+                    <img src="./img/bg_04_04_img_05.jpg" alt="">
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="animate-box ani" swiper-animate-effect="fadeIn" swiper-animate-duration="1s" swiper-animate-delay="0">
+                    <img src="./img/bg_04_05_img_01.jpg" alt="">
+                    <div class="overflow-y overflow-04-content">
+                        <img src="./img/bg_04_05_img_02.jpg" alt="">
+                        <img src="./img/bg_04_05_img_03.jpg" alt="">
+                        <img src="./img/bg_04_05_img_04.jpg" alt="">
+                        <img src="./img/bg_04_05_img_05.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="bg-05 bg ani" swiper-animate-effect="fadeIn" swiper-animate-duration="1s" swiper-animate-delay="0"></div>
+                <div class="bg-05-img pos-center ani" swiper-animate-effect="fadeInRight" swiper-animate-duration="1s" swiper-animate-delay="0"></div>
+                <div class="bg-05-text pos-center ani" swiper-animate-effect="fadeInUp" swiper-animate-duration="1s" swiper-animate-delay="0.5s"></div>
+                <div class="bg-05-title pos-center ani" swiper-animate-effect="fadeIn" swiper-animate-duration="1s" swiper-animate-delay="0.5s"></div>
+            </div>
+            <div class="swiper-slide">
+                <div class="bg-05-02 bg ani" swiper-animate-effect="fadeIn" swiper-animate-duration="1s" swiper-animate-delay="0"></div>
+            </div>
+            <div class="swiper-slide">
+                <img src="./img/bg_05_03_img.jpg" alt="" class="ani" swiper-animate-effect="fadeIn" swiper-animate-duration="1s" swiper-animate-delay="0">
+                <div class="bg-05-03-text pos-center ani" swiper-animate-effect="fadeInDown" swiper-animate-duration="1s" swiper-animate-delay="0"></div>
+            </div>
+            <div class="swiper-slide">
+                <!-- <div class="bg-05-04 bg"></div> -->
+                <div class="bg-05-04-img pos-center ani" swiper-animate-effect="fadeIn" swiper-animate-duration="1s" swiper-animate-delay="0"></div>
+                <div class="bg-05-04-text pos-center ani" swiper-animate-effect="fadeInUp" swiper-animate-duration="1s" swiper-animate-delay="0"></div>
+            </div>
+            <div class="swiper-slide">
+                <img src="./img/bg_05_05_img.jpg" alt="" class="ani" swiper-animate-effect="fadeIn" swiper-animate-duration="1s" swiper-animate-delay="0">
+                <div class="bg-05-05-text pos-center ani" swiper-animate-effect="fadeInDown" swiper-animate-duration="1s" swiper-animate-delay="0"></div>
+            </div>
+            <div class="swiper-slide">
+                <img src="./img/bg_05_06_img.jpg" alt="" class="ani" swiper-animate-effect="fadeIn" swiper-animate-duration="1s" swiper-animate-delay="0">
+            </div>
+            <div class="swiper-slide">
+                <!-- <div class="bg-05-07 bg"></div> -->
+                <div class="bg-05-07-img pos-center ani" swiper-animate-effect="fadeInLeft" swiper-animate-duration="1s" swiper-animate-delay="0"></div>
+                <div class="bg-05-07-text pos-center ani" swiper-animate-effect="fadeInLeft" swiper-animate-duration="1s" swiper-animate-delay="0"></div>
+            </div>
+            <div class="swiper-slide">
+                <img src="./img/bg_05_08_img.jpg" alt="" class="ani" swiper-animate-effect="fadeIn" swiper-animate-duration="1s" swiper-animate-delay="0">
+            </div>
+            <div class="swiper-slide">
+                <img src="./img/bg_05_09_img.jpg" alt="" class="ani" swiper-animate-effect="fadeIn" swiper-animate-duration="1s" swiper-animate-delay="0">
+            </div>
+            <div class="swiper-slide">
+                <img src="./img/bg_end_01.jpg" alt="" class="ani" swiper-animate-effect="fadeIn" swiper-animate-duration="1s" swiper-animate-delay="0">
+            </div>
+            <div class="swiper-slide">
+                <img src="./img/bg_end_02.jpg" alt="" class="ani" swiper-animate-effect="fadeIn" swiper-animate-duration="1s" swiper-animate-delay="0">
+                <div class="bg-end-02-text pos-center"></div>
+            </div>
+        </div>
+    </div>
+    <script src="js/lib/zepto.min.js"></script>
+    <script src="js/lib/swiper.min.js"> </script>
+    <script src="js/lib/swiper.animate1.0.3.min.js"> </script>
+    <script>
+        let hasTouchStartEvent = 'ontouchstart' in document.createElement('div');
+
+        window.onload = function () {
+            var mySwiper = new Swiper ('.swiper-container-horizontal', {
+                direction: 'horizontal',
+                noSwiping : true,
+                noSwipingClass : 'stop-swiping',
+                on:{
+                    init: function () {
+                        swiperAnimateCache(this); //隐藏动画元素 
+                        swiperAnimate(this); //初始化完成开始动画
+                    }, 
+                    slideChangeTransitionEnd: function () { 
+                        swiperAnimate(this); //每个slide切换结束时也运行当前slide动画
+                        this.slides.eq(this.activeIndex).find('.ani').removeClass('ani'); // 动画只展现一次，去除ani类名
+                    }
+                }
+            });
+            // 31
+            mySwiper.slideTo(0);
+            let defuteDiff = 10; 
+            let touchStart, touchCurrent;
+            mySwiper.slides.on(hasTouchStartEvent ? 'touchstart' : 'mousedown', function (ev) {
+                if ($(this).hasClass('touch-move')) {
+                    if ($(this).attr('data-animate') === 'true') return false;
+                    touchStart = ev.touches ? ev.changedTouches[0].pageX : ev.pageX;
+                    if (!ev.touches) {
+                        ev.preventDefault && ev.preventDefault()
+                    }
+                }
+            }, true)
+
+            mySwiper.slides.on(hasTouchStartEvent ? 'touchend' : 'mouseup', function (ev) {
+                if ($(this).hasClass('touch-move')) {
+                    if ($(this).attr('data-animate') === 'true') return false;
+                    touchCurrent = ev.touches ? ev.changedTouches[0].pageX : ev.pageX;
+                    let touchesDiff = touchCurrent - touchStart;
+                    if (touchesDiff > defuteDiff) {
+                        console.log('left');
+                        mySwiper.slidePrev();
+                    }
+                    if (touchesDiff < -defuteDiff) {
+                        console.log('right');
+                        $(this).addClass('touch-animate');
+                        $(this).attr('data-animate', true);
+                        $(this).removeClass('stop-swiping');
+                    }
+                }
+            }, true)
+        }
+    </script>
+</body>
+</html>
