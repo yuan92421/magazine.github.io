@@ -104,8 +104,7 @@ img {
 }
 
 .bg-01, .bg-02, .bg-03, .bg-04, .bg-05, .bg-06 {
-  background: url(https://high-cn-01.cdn.bilnn.com/get/m20191221/2019/12/21/16f264e46a7c44bd
-  ) no-repeat center;
+  background: url(../img/bg_01.jpg) no-repeat center;
   background-size: cover;
 }
 
