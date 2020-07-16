@@ -216,6 +216,17 @@ img {
   margin: -2.8rem 0 0 -3.2rem;
 }
 
+.bg-02-text::after {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  display: block;
+  content: '';
+  background: #fff;
+  width: 1rem;
+  height: 3.9rem;
+}
+
 .bg-02-02-text {
   width: 3.15rem;
   height: 2.74rem;
